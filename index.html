@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diploma Life – Your guide to polytechnic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a class="logo" href="#home">Diploma Life</a>
+      <button id="menuBtn" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav id="menu">
+        <a href="#why">Why diploma</a><a href="#courses">Courses</a
+        ><a href="#counseling">Counseling</a> <a href="#colleges">Colleges</a
+        ><a href="#feedback">Feedback</a><a href="#contact">Contact</a>
+        <button id="theme" aria-label="Toggle dark mode">◐</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <h1>Join polytechnic. Start your career three years early.</h1>
+            <p class="lead">
+              Practical skills, low fees and a direct path to a job or to B.Tech
+              through lateral entry.
+            </p>
+            <a class="btn" href="#courses">Explore courses</a>
+          </div>
+          <div class="finder card" aria-live="polite">
+            <h2>Which branch suits you?</h2>
+            <p>Pick what you enjoy most.</p>
+            <div class="chips" id="chips"></div>
+            <div id="result" class="result">
+              Choose an interest to see a match.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" class="wrap">
+        <h2>Why choose a diploma?</h2>
+        <div class="grid3">
+          <article>
+            <h3>Practical learning</h3>
+            <p>Labs and workshops fill a large part of every semester.</p>
+          </article>
+          <article>
+            <h3>Industry visits</h3>
+            <p>Visits and internships connect you with working engineers.</p>
+          </article>
+          <article>
+            <h3>Affordable education</h3>
+            <p>
+              Government polytechnics charge a fraction of degree-college fees.
+            </p>
+          </article>
+        </div>
+        <div class="stats" id="stats">
+          <div><b data-n="3">0</b><span>years to a diploma</span></div>
+          <div><b data-n="2">0</b><span>paths: job or lateral entry</span></div>
+          <div><b data-n="5">0</b><span>core branches below</span></div>
+        </div>
+      </section>
+
+      <section id="courses" class="wrap">
+        <h2>Courses</h2>
+        <div class="chips" id="courseFilter"></div>
+        <div id="courseList" class="grid3"></div>
+      </section>
+
+      <section id="counseling" class="wrap">
+        <h2>Counseling, step by step</h2>
+        <p class="note">
+          Steps follow the usual POLYCET process. Dates and rules change every
+          year, so check the official notification.
+        </p>
+        <div class="stepper">
+          <ol id="steps"></ol>
+          <div class="card" id="stepBody"></div>
+        </div>
+        <div class="bar"><i id="bar"></i></div>
+      </section>
+
+      <section id="colleges" class="wrap">
+        <h2>Find a college</h2>
+        <div class="tools">
+          <input
+            id="q"
+            type="search"
+            placeholder="Search by name or district"
+          />
+          <select id="branch">
+            <option value="">All branches</option>
+          </select>
+        </div>
+        <p class="note">
+          Sample list. Confirm seats and branches on the official counseling
+          portal.
+        </p>
+        <div id="collegeList" class="grid3"></div>
+      </section>
+
+      <section class="wrap">
+        <h2>What they've said</h2>
+        <figure class="quote card">
+          <blockquote id="qt"></blockquote>
+          <figcaption id="qn"></figcaption>
+          <div class="dots" id="dots"></div>
+        </figure>
+      </section>
+
+      <section id="feedback" class="wrap two">
+        <div>
+          <h2>Share your feedback</h2>
+          <form id="fbForm">
+            <label>Name<input name="name" required /></label>
+            <label
+              >Rating
+              <select name="rate">
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>2</option>
+                <option>1</option>
+              </select></label
+            >
+            <label
+              >Message<textarea name="msg" rows="3" required></textarea>
+            </label>
+            <button class="btn">Send feedback</button>
+          </form>
+        </div>
+        <div>
+          <h3>Recent feedback</h3>
+          <ul id="fbList" class="fb"></ul>
+        </div>
+      </section>
+    </main>
+    <footer>© 2026 Diploma Life. All rights reserved.</footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
